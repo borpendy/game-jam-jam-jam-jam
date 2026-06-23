@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dcjch26m5wonp"]
+
+[ext_resource type="PackedScene" uid="uid://ddy42wxfve34d" path="res://minigame.tscn" id="1_uhqqe"]
+
+[node name="Test scene" type="Node2D" unique_id=727478404]
+
+[node name="Minigame" parent="." unique_id=1129499124 instance=ExtResource("1_uhqqe")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=789765107]
+zoom = Vector2(2, 2)
