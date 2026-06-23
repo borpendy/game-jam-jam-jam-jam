@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://coto5r5bkaqsu"]
+
+[ext_resource type="Script" uid="uid://ljtafkmwd3b8" path="res://scenes/config.gd" id="1_bw6k5"]
+[ext_resource type="Script" uid="uid://dktvht1ju0fwl" path="res://scenes/debug_printer.gd" id="2_y3j0m"]
+[ext_resource type="Script" uid="uid://dwaa6d8l5scmg" path="res://scenes/input_manager.gd" id="3_rurhu"]
+[ext_resource type="PackedScene" uid="uid://b3hjlgmu1lcvb" path="res://scenes/player.tscn" id="4_kk2rg"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_f56pv"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_f56pv"]
+a = Vector2(24, 419)
+b = Vector2(24, -258)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fk84u"]
+a = Vector2(110, -310)
+b = Vector2(110, 379)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wrjnq"]
+a = Vector2(1165, 72)
+b = Vector2(-1032, 75)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6suor"]
+a = Vector2(-1041, -16)
+b = Vector2(1165, -16)
+
+[sub_resource type="GDScript" id="GDScript_jyhfs"]
+script/source = "extends Node2D
+
+# Stores all drag/boost zones, on entering the player + moving entities are affected
+func _physics_process(delta: float) -> void:
+	pass
+"
+
+[node name="GameScene" type="Node2D" unique_id=1662408200]
+
+[node name="Config" type="Node" parent="." unique_id=1855101642]
+unique_name_in_owner = true
+script = ExtResource("1_bw6k5")
+
+[node name="DebugPrinter" type="Node" parent="." unique_id=969129217]
+unique_name_in_owner = true
+script = ExtResource("2_y3j0m")
+
+[node name="InputManager" type="Node2D" parent="." unique_id=1327009288]
+unique_name_in_owner = true
+script = ExtResource("3_rurhu")
+
+[node name="Player" parent="." unique_id=780525033 instance=ExtResource("4_kk2rg")]
+position = Vector2(85, -17)
+
+[node name="StartBox" type="Node2D" parent="." unique_id=640457184]
+
+[node name="Right Wall" type="StaticBody2D" parent="StartBox" unique_id=1035346206]
+position = Vector2(1216, -257)
+
+[node name="Sprite2D" type="Sprite2D" parent="StartBox/Right Wall" unique_id=1911917042]
+position = Vector2(68.50003, 73.78638)
+rotation = 1.5707964
+scale = Vector2(756.5675, 85.5)
+texture = SubResource("CanvasTexture_f56pv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartBox/Right Wall" unique_id=804004821]
+shape = SubResource("SegmentShape2D_f56pv")
+
+[node name="Left Wall" type="StaticBody2D" parent="StartBox" unique_id=1751279667]
+position = Vector2(-1060, -215)
+
+[node name="Sprite2D" type="Sprite2D" parent="StartBox/Left Wall" unique_id=1477548272]
+position = Vector2(68.50003, 73.78638)
+rotation = 1.5707964
+scale = Vector2(756.5675, 85.5)
+texture = SubResource("CanvasTexture_f56pv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartBox/Left Wall" unique_id=82767185]
+shape = SubResource("SegmentShape2D_fk84u")
+
+[node name="Upper Wall" type="StaticBody2D" parent="StartBox" unique_id=242804962]
+position = Vector2(75, -587)
+
+[node name="Sprite2D" type="Sprite2D" parent="StartBox/Upper Wall" unique_id=1804717048]
+position = Vector2(71.99998, 27.000004)
+scale = Vector2(2359.9998, 85.5)
+texture = SubResource("CanvasTexture_f56pv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartBox/Upper Wall" unique_id=755671673]
+shape = SubResource("SegmentShape2D_wrjnq")
+
+[node name="Lower Wall" type="StaticBody2D" parent="StartBox" unique_id=1829358039]
+position = Vector2(82, 171)
+
+[node name="Sprite2D" type="Sprite2D" parent="StartBox/Lower Wall" unique_id=1767550678]
+position = Vector2(64.00015, 27.000004)
+scale = Vector2(2362, 85.5)
+texture = SubResource("CanvasTexture_f56pv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartBox/Lower Wall" unique_id=109482296]
+shape = SubResource("SegmentShape2D_6suor")
+
+[node name="PhysicsEngine" type="Node2D" parent="." unique_id=1948946673]
+script = SubResource("GDScript_jyhfs")
