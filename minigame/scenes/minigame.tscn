@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dye4hv0qfiv8h"]
+
+[ext_resource type="Script" uid="uid://bkbaghxue7ja1" path="res://minigame/scripts/minigame.gd" id="1_4bqly"]
+[ext_resource type="Texture2D" uid="uid://cdx4qqr8sfhyv" path="res://sprites/New Piskel (1).png" id="2_oemwr"]
+[ext_resource type="Script" uid="uid://flm5xwgf0bi2" path="res://minigame/scripts/pointer.gd" id="3_176e0"]
+[ext_resource type="Texture2D" uid="uid://itton6nc4r22" path="res://sprites/New Piskel (2).png" id="4_g8igt"]
+[ext_resource type="Script" uid="uid://xwr18btf3pgk" path="res://minigame/scripts/indicator.gd" id="5_176e0"]
+
+[node name="Minigame" type="Node2D" unique_id=2074277694]
+script = ExtResource("1_4bqly")
+
+[node name="Pointer" type="Sprite2D" parent="." unique_id=1307357591]
+scale = Vector2(96, 16)
+texture = ExtResource("2_oemwr")
+script = ExtResource("3_176e0")
+
+[node name="Indicator" type="Sprite2D" parent="." unique_id=1007325317]
+position = Vector2(258, 43)
+scale = Vector2(4, 4)
+texture = ExtResource("4_g8igt")
+script = ExtResource("5_176e0")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1960048735]
