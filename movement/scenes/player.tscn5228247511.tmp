@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b3hjlgmu1lcvb"]
+
+[ext_resource type="Script" uid="uid://dhgl0dp24oab5" path="res://movement/scripts/character_body_2d.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://cjpkvrfnbx7nw" path="res://sprites/icon.svg" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://c24b4n4ha1xfd" path="res://movement/scripts/player_stats.gd" id="3_qhqgy"]
+[ext_resource type="Script" uid="uid://djwbwewcji4hv" path="res://movement/scripts/player_actions.gd" id="4_rtbls"]
+[ext_resource type="PackedScene" uid="uid://ypafx0sns8b7" path="res://movement/scenes/player_action.tscn" id="5_rtbls"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wfyh"]
+atlas = ExtResource("2_qhqgy")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fk84u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wfyh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f56pv"]
+radius = 60.00833
+
+[node name="Player" type="CharacterBody2D" unique_id=780525033]
+script = ExtResource("1_g2els")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1883649536]
+sprite_frames = SubResource("SpriteFrames_fk84u")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=332489346]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_f56pv")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1549403297]
+
+[node name="PlayerStats" type="Node2D" parent="." unique_id=536502997]
+script = ExtResource("3_qhqgy")
+
+[node name="PlayerActions" type="Node2D" parent="." unique_id=1686952502]
+script = ExtResource("4_rtbls")
+
+[node name="PlayerAction" parent="." unique_id=2043193963 instance=ExtResource("5_rtbls")]

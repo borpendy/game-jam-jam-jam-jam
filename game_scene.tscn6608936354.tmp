@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://coto5r5bkaqsu"]
+
+[ext_resource type="Texture2D" uid="uid://dy30fsfrshx8w" path="res://sprites/proto2.png" id="1_udeyl"]
+[ext_resource type="Script" uid="uid://ljtafkmwd3b8" path="res://movement/scripts/config.gd" id="2_miq82"]
+[ext_resource type="Script" uid="uid://dktvht1ju0fwl" path="res://movement/scripts/debug_printer.gd" id="3_j5hk1"]
+[ext_resource type="Script" uid="uid://coi7ge54306lu" path="res://movement/scripts/current_manager.gd" id="4_ueiaa"]
+[ext_resource type="Script" uid="uid://dwaa6d8l5scmg" path="res://movement/scripts/input_manager.gd" id="5_daj04"]
+[ext_resource type="PackedScene" uid="uid://b3hjlgmu1lcvb" path="res://movement/scenes/player.tscn" id="6_mlphb"]
+[ext_resource type="PackedScene" uid="uid://bunqmf1jqu7tm" path="res://movement/scenes/current.tscn" id="7_opqoc"]
+[ext_resource type="Script" uid="uid://ef63hvoq6k7e" path="res://movement/scripts/entities.gd" id="8_bpcsf"]
+[ext_resource type="Script" uid="uid://c2734ylt7sj6v" path="res://movement/scripts/physics_engine.gd" id="9_3d2pr"]
+
+[node name="GameScene" type="Node2D" unique_id=1662408200]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1964424579]
+
+[node name="TileMap" type="TileMap" parent="Area2D" unique_id=188203417]
+format = 2
+
+[node name="BackIMG" type="Sprite2D" parent="Area2D" unique_id=1406462810]
+scale = Vector2(4, 4)
+texture = ExtResource("1_udeyl")
+
+[node name="Config" type="Node" parent="." unique_id=1855101642]
+unique_name_in_owner = true
+script = ExtResource("2_miq82")
+
+[node name="DebugPrinter" type="Node" parent="." unique_id=969129217]
+unique_name_in_owner = true
+script = ExtResource("3_j5hk1")
+
+[node name="CurrentManager" type="Node" parent="." unique_id=1792403985]
+unique_name_in_owner = true
+script = ExtResource("4_ueiaa")
+
+[node name="SignalRouter" type="Node2D" parent="." unique_id=1327009288]
+unique_name_in_owner = true
+script = ExtResource("5_daj04")
+
+[node name="Current" parent="." unique_id=1733726501 instance=ExtResource("7_opqoc")]
+position = Vector2(-243, 105)
+
+[node name="MovingEntities" type="Node2D" parent="." unique_id=1488839588]
+unique_name_in_owner = true
+script = ExtResource("8_bpcsf")
+
+[node name="PhysicsEngine" type="Node2D" parent="." unique_id=204610924]
+unique_name_in_owner = true
+script = ExtResource("9_3d2pr")
+
+[node name="Player" parent="." unique_id=780525033 instance=ExtResource("6_mlphb")]
+unique_name_in_owner = true
+position = Vector2(420, -96)

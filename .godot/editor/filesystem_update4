@@ -1,0 +1,12 @@
+res://game_scene.tscn
+res://movement/scripts/input_manager.gd
+res://movement/scripts/custom_signals.gd
+res://movement/scripts/character_body_2d.gd
+res://movement/scenes/player.tscn
+res://movement/scripts/player_stats.gd
+res://movement/scenes/player_action.gd
+res://movement/scripts/player_actions.gd
+res://movement/scripts/player_action.gd
+res://movement/scripts/sprint.gd
+res://movement/scenes/player_action.tscn
+res://movement/scripts/physics_engine.gd

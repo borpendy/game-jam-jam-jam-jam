@@ -1,0 +1,32 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1782270958
+game_scene.tscn::PackedScene::5795612906661571448::1782270704::0::1::::<><><>0<>0<><>::uid://dy30fsfrshx8w::::res://sprites/proto2.png<>uid://ljtafkmwd3b8::::res://movement/scripts/config.gd<>uid://dktvht1ju0fwl::::res://movement/scripts/debug_printer.gd<>uid://coi7ge54306lu::::res://movement/scripts/current_manager.gd<>uid://dwaa6d8l5scmg::::res://movement/scripts/input_manager.gd<>uid://b3hjlgmu1lcvb::::res://movement/scenes/player.tscn<>uid://bunqmf1jqu7tm::::res://movement/scenes/current.tscn<>uid://ef63hvoq6k7e::::res://movement/scripts/entities.gd<>uid://c2734ylt7sj6v::::res://movement/scripts/physics_engine.gd
+::res://minigame/::1782266057
+::res://minigame/scenes/::1782266057
+minigame.tscn::PackedScene::8853826245100332941::1782265810::0::1::::<><><>0<>0<><>::uid://bkbaghxue7ja1::::res://minigame/scripts/minigame.gd<>uid://cdx4qqr8sfhyv::::res://sprites/New Piskel (1).png<>uid://flm5xwgf0bi2::::res://minigame/scripts/pointer.gd<>uid://itton6nc4r22::::res://sprites/New Piskel (2).png<>uid://xwr18btf3pgk::::res://minigame/scripts/indicator.gd
+::res://minigame/scripts/::1782266057
+indicator.gd::GDScript::1660840069469049058::1782200210::0::1::::<>Sprite2D<><>0<>0<><>::
+minigame.gd::GDScript::3090384616700188606::1782200294::0::1::::<>Node2D<><>0<>0<><>::
+pointer.gd::GDScript::374435793518192647::1782200418::0::1::::<>Sprite2D<><>0<>0<><>::
+::res://movement/::1782266057
+::res://movement/scenes/::1782270958
+current.tscn::PackedScene::3818027671880437458::1782198976::0::1::::<><><>0<>0<><>::uid://prg7p68um2ye::::res://scripts/current.gd
+player.tscn::PackedScene::4366725381125920715::1782270961::0::1::::<><><>0<>0<><>::uid://dhgl0dp24oab5::::res://movement/scripts/character_body_2d.gd<>uid://cjpkvrfnbx7nw::::res://sprites/icon.svg<>uid://c24b4n4ha1xfd::::res://movement/scripts/player_stats.gd<>uid://djwbwewcji4hv::::res://movement/scenes/player_actions.gd<>uid://c82nsk4dms7wg::::res://movement/scripts/player_action.gd
+::res://movement/scripts/::1782270958
+character_body_2d.gd::GDScript::7663682936846119200::1782270566::0::1::::<>CharacterBody2D<><>0<>0<><>::
+config.gd::GDScript::791810581307026731::1782198976::0::1::::<>Node<><>0<>0<><>::
+current.gd::GDScript::1088349361016845856::1782198976::0::1::::<>Node2D<><>0<>0<><>::
+current_manager.gd::GDScript::5773954116676686510::1782199076::0::1::::Current<>Node<><>0<>0<><>::
+debug_printer.gd::GDScript::7901662260737394995::1782198976::0::1::::<>Node<><>0<>0<><>::
+entities.gd::GDScript::293009893090578020::1782198976::0::1::::<>Node2D<><>0<>0<><>::
+input_manager.gd::GDScript::8703472179816253494::1782270618::0::1::::<>Node2D<><>0<>0<><>::
+physics_engine.gd::GDScript::6735753376023699079::1782198976::0::1::::<>Node2D<><>0<>0<><>::
+player_action.gd::GDScript::7145633442183053922::1782270958::0::1::::<>Node2D<><>0<>0<><>::
+player_stats.gd::GDScript::6727920333418795001::1782270780::0::1::::<>Node2D<><>0<>0<><>::
+player_actions.gd::GDScript::7836478203051927687::1782270953::0::1::::<>Node2D<><>0<>0<><>::
+::res://sprites/::1782266057
+icon.svg::CompressedTexture2D::5436152199252970488::1782198472::1782265825::1::::<><><>0<>0<>f8ed3929c5d5abe3f9cf490b84922378<>res://.godot/imported/icon.svg-964d8c66fbd3bda40c44ca195472a8e1.ctex::
+New Piskel (1).png::CompressedTexture2D::5032678820295285769::1782199848::1782265719::1::::<><><>0<>0<>49dd91818ffd1647041f6cc9fef5c10f<>res://.godot/imported/New Piskel (1).png-b2d13f1f679b6656a3a3fd0260412ec4.ctex::
+New Piskel (2).png::CompressedTexture2D::601913281695608541::1782199848::1782265719::1::::<><><>0<>0<>10685d5611d516deb24d08dca9e8bb0b<>res://.godot/imported/New Piskel (2).png-d79e2a0c3889e968a00a3164d3ddcac6.ctex::
+New Piskel.png::CompressedTexture2D::4651636076702788853::1782199848::1782265719::1::::<><><>0<>0<>05afcf4e3bb51fe68910d17a06e6e1e9<>res://.godot/imported/New Piskel.png-1d1450533306d83717fbc2d6a043035f.ctex::
+proto2.png::CompressedTexture2D::8903124683235523980::1782198828::1782265819::1::::<><><>0<>0<>f1504369a656121b0e0772bbe9c942bc<>res://.godot/imported/proto2.png-727af5f8176a7582194b17088d7f20f9.ctex::
